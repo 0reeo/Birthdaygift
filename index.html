@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Kamu 🎁</title>
+
+  <link rel="stylesheet" href="style-base.css">
+  <link rel="stylesheet" id="theme-style">
+</head>
+<body>
+
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<div class="container fade-in">
+
+  <!-- PASSWORD -->
+  <div id="lock">
+    <h2>Masukkan kode rahasia 🤍</h2>
+    <input type="password" id="password" placeholder="••••••">
+    <button id="unlockBtn">Buka</button>
+    <p id="lockMsg"></p>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div id="countdown" class="hidden">
+    <h2>Menunggu hari spesial…</h2>
+    <p id="timer"></p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main" class="hidden">
+    <h1>Untuk seseorang yang spesial</h1>
+    <button id="openGiftBtn">Buka Hadiah</button>
+
+    <div id="content" class="hidden">
+      <p id="typingText"></p>
+
+      <div class="gallery">
+        <img src="assets/img1.jpg">
+        <img src="assets/img2.jpg">
+        <img src="assets/img3.jpg">
+      </div>
+
+      <button id="musicBtn">▶ Musik</button>
+    </div>
+  </div>
+
+</div>
+
+<canvas id="confetti"></canvas>
+<script src="script.js"></script>
+</body>
+</html>

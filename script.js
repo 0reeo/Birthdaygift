@@ -113,3 +113,39 @@ function confetti(){
     requestAnimationFrame(draw);
   })();
   }
+/* ================== QR CODE ================== */
+function drawQR(text){
+  const c = document.getElementById("qr");
+  const ctx = c.getContext("2d");
+  const size = 160;
+  c.width = c.height = size;
+
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0,0,size,size);
+  ctx.fillStyle = "#000";
+
+  let hash = 0;
+  for (let i=0;i<text.length;i++){
+    hash = text.charCodeAt(i) + ((hash<<5)-hash);
+  }
+
+  const cells = 21;
+  const cellSize = size / cells;
+
+  for (let y=0;y<cells;y++){
+    for (let x=0;x<cells;x++){
+      const v = (hash >> ((x*y)%16)) & 1;
+      if (v){
+        ctx.fillRect(
+          x*cellSize,
+          y*cellSize,
+          cellSize,
+          cellSize
+        );
+      }
+    }
+  }
+}
+
+// QR mengarah ke halaman penutup
+drawQR(window.location.origin + window.location.pathname.replace("index.html","") + "final.html");

@@ -55,3 +55,13 @@ button {
   h1 { font-size: 20px; }
   button { width: 100%; }
 }
+.qr-section {
+  margin-top: 20px;
+}
+.qr-section p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+canvas#qr {
+  margin-top: 10px;
+}

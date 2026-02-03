@@ -1,9 +1,9 @@
 /* ================== SETTING ================== */
 // GANTI TEMA: romantis | polaroid | galaxy | surat
-const theme = "romantis";
+const theme = "polaroid";
 
 // PASSWORD
-const PASSWORD = "1203"; // ganti sesuai mau kamu
+const PASSWORD = "1002"; // ganti sesuai mau kamu
 
 // TANGGAL & JAM ULTAH (YYYY, MM-1, DD, HH, MM)
 const BIRTHDAY = new Date(2026, 2, 12, 0, 0); // contoh: 12 Maret 2026 00:00

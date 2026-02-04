@@ -123,15 +123,12 @@ function confetti(){
 /* ================== QR CODE ================== */
 function drawQR(text){
   const canvas = document.getElementById("qr");
-  QRCode.toCanvas(canvas, text, {
-    width: 160,
-    margin: 1,
-    color: {
-      dark: "#000000",
-      light: "#ffffff"
-    }
-  });
+  QRCode.toCanvas(canvas, text, { width: 160 });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  drawQR("https://oreeo.github.io/Birthdaygift/final.html");
+});
 
 // QR mengarah ke halaman penutup
 drawQR(window.location.origin + window.location.pathname.replace("index.html","") + "final.html");

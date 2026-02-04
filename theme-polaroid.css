@@ -1,3 +1,18 @@
 body { background:#f5f5f5; }
 .gallery img { background:#fff; padding:8px; box-shadow:0 8px 20px rgba(0,0,0,.15); }
 button { background:#222; color:#fff; }
+/* ==== DEBUG QR (SEMENTARA) ==== */
+.qr-section {
+  position: relative;
+  z-index: 9999;
+  margin-top: 24px;
+  display: block;
+}
+
+#qr {
+  display: block;
+  background: white;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}

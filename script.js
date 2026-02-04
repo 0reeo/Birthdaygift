@@ -6,7 +6,7 @@ const theme = "polaroid";
 const PASSWORD = "1002"; // ganti sesuai mau kamu
 
 // TANGGAL & JAM ULTAH (YYYY, MM-1, DD, HH, MM)
-const BIRTHDAY = new Date(2026, 1, 10, 0, 0); // contoh: 12 Maret 2026 00:00
+const BIRTHDAY = new Date(2026, 2, 10, 0, 0); // contoh: 12 Maret 2026 00:00
 
 // TEKS PERSONAL (implisit)
 const message = `
@@ -36,11 +36,18 @@ document.getElementById("unlockBtn").onclick = () => {
     lockMsg.textContent = "Kode salah. Coba lagi 🤍";
   }
 };
-
+const DEV_MODE = new URLSearchParams(window.location.search).get("dev") === "true";
 /* ================== COUNTDOWN ================== */
-function checkCountdown(){
+function checkCountdown() {
   const now = new Date();
-  if (now < BIRTHDAY){
+
+  if (DEV_MODE) {
+    main.classList.remove("hidden");
+    countdown.classList.add("hidden");
+    return;
+  }
+
+  if (now < BIRTHDAY) {
     countdown.classList.remove("hidden");
     tick();
   } else {

@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Satu Hal Terakhir</title>
   <link rel="stylesheet" href="style-base.css">
+  <style>
+    body {
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .ending {
+      max-width: 420px;
+      padding: 24px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .line {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: appear 1.5s ease forwards;
+    }
+
+    .line:nth-child(1) { animation-delay: 1s; }
+    .line:nth-child(2) { animation-delay: 3s; }
+    .line:nth-child(3) { animation-delay: 5s; }
+    .line:nth-child(4) { animation-delay: 8s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-<div class="container fade-in">
-  <p style="line-height:1.7">
-    Jika kamu bertanya<br>
-    dari siapa ini datang—<br><br>
-
-    anggap saja<br>
-    dari seseorang<br>
-    yang ingin kamu baik-baik saja.<br><br>
-
-    Tidak lebih.<br>
-    Tidak kurang.
-  </p>
-</div>
-
+  <div class="ending">
+    <p class="line">Jika kamu bertanya,</p>
+    <p class="line">dari siapa ini datang,</p>
+    <p class="line">anggap saja dari seseorang</p>
+    <p class="line"><strong>yang ingin kamu baik-baik saja.</strong></p>
+  </div>
 </body>
 </html>

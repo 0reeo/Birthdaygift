@@ -121,11 +121,20 @@ function confetti(){
   })();
   }
 /* ================== QR CODE ================== */
-function drawQR(text){
-  const canvas = document.getElementById("qr");
-  QRCode.toCanvas(canvas, text, { width: 160 });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  drawQR("https://oreeo.github.io/Birthdaygift/final.html");
+  const canvas = document.getElementById("qr");
+  if (!canvas) return;
+
+  QRCode.toCanvas(
+    canvas,
+    "https://oreeo.github.io/Birthdaygift/final.html",
+    {
+      width: 160,
+      margin: 1,
+      color: {
+        dark: "#000000",
+        light: "#ffffff"
+      }
+    }
+  );
 });

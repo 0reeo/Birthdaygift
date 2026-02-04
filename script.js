@@ -6,7 +6,7 @@ const theme = "polaroid";
 const PASSWORD = "1002"; // ganti sesuai mau kamu
 
 // TANGGAL & JAM ULTAH (YYYY, MM-1, DD, HH, MM)
-const BIRTHDAY = new Date(2026, 2, 10, 0, 0); // contoh: 12 Maret 2026 00:00
+const BIRTHDAY = new Date(2026, 1, 10, 0, 0); // contoh: 12 Maret 2026 00:00
 
 // TEKS PERSONAL (implisit)
 const message = `

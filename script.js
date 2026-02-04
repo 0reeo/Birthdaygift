@@ -138,3 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+setTimeout(() => {
+  const c = document.getElementById("qr");
+  if (!c) {
+    console.log("Canvas QR TIDAK ADA");
+    return;
+  }
+  QRCode.toCanvas(c, "https://google.com", { width: 160 });
+  console.log("QR HARUSNYA MUNCUL");
+}, 1000);

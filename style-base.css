@@ -65,24 +65,9 @@ button {
 canvas#qr {
   margin-top: 10px;
 }
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center; /* Mengetengahkan secara horizontal */
-    align-items: center;     /* Mengetengahkan secara vertikal */
-    background-color: #f0f0f0; /* Opsional: ganti warna background jika perlu */
-}
-
-.container {
-    text-align: center; /* Agar teks di dalamnya juga rata tengah */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px; /* Opsional: batasi lebar konten agar rapi di layar lebar */
-    padding: 20px;
+#confetti {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }

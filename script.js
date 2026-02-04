@@ -129,6 +129,3 @@ function drawQR(text){
 document.addEventListener("DOMContentLoaded", () => {
   drawQR("https://oreeo.github.io/Birthdaygift/final.html");
 });
-
-// QR mengarah ke halaman penutup
-drawQR(window.location.origin + window.location.pathname.replace("index.html","") + "final.html");
